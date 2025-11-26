@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Stories That Resonate - Podcast',
+  title: 'Daqar Talks & Inspire Podcast',
   description: 'Conversations about storytelling, creativity, and human connection',
 }
 

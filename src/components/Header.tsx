@@ -1,18 +1,19 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
+import { useState } from "react";
+import Link from "next/link";
+import Image from 'next/image' 
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Episodes', href: '/episodes' },
-    { name: 'About', href: '/about' },
-    { name: 'Subscribe', href: '/subscribe' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "Home", href: "/" },
+    { name: "Episodes", href: "/episodes" },
+    { name: "About", href: "/about" },
+    { name: "Subscribe", href: "/subscribe" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="bg-white dark:bg-primary-black shadow-sm sticky top-0 z-50">
@@ -20,9 +21,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-red rounded-full"></div>
+            <Image
+              src="/podlogo.png"
+              alt="Daqar Talks & Inspire Logo"
+              width={32} 
+              height={32} 
+              className="rounded-full" 
+            />
             <span className="font-bold text-xl text-primary-black dark:text-white">
-              Stories Daqar Podcast
+              Daqar Talks & Inspire
             </span>
           </Link>
 
@@ -44,8 +51,18 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -69,5 +86,5 @@ export default function Header() {
         )}
       </nav>
     </header>
-  )
+  );
 }
