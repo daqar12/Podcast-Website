@@ -12,6 +12,7 @@ export default function Header() {
     { name: "Episodes", href: "/episodes" },
     { name: "About", href: "/about" },
     { name: "Subscribe", href: "/subscribe" },
+    {name: "Guests", href: "/Guests" },
     { name: "Contact", href: "/contact" },
   ];
 
