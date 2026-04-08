@@ -2,7 +2,7 @@ import { FaMicrophone } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#111] text-white overflow-hidden py-24 lg:py-32">
+    <section className="relative bg-[#000000] text-white overflow-hidden py-24 lg:py-32">
       {/* Background Blurs */}
       <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-indigo-600 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-red-600 rounded-full blur-3xl opacity-10"></div>

@@ -153,7 +153,7 @@ const episodeDetails = {
 
 export default function EpisodeDetailPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section with Artwork */}
@@ -238,13 +238,13 @@ export default function EpisodeDetailPage() {
       </section>
 
       {/* Audio Player Section */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-white/5">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
+          <div className="bg-black rounded-2xl p-6 shadow-lg">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="font-semibold text-lg">Now Playing</h3>
-                <p className="text-gray-600">{episodeDetails.title}</p>
+                <h3 className="font-semibold text-lg text-white">Now Playing</h3>
+                <p className="text-white">{episodeDetails.title}</p>
               </div>
               <div className="flex space-x-3">
                 <button className="w-12 h-12 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors">
@@ -267,10 +267,10 @@ export default function EpisodeDetailPage() {
 
             {/* Progress Bar */}
             <div className="space-y-2">
-              <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-2 bg-black-200 rounded-full overflow-hidden">
                 <div className="h-full bg-[#FF4F4F] w-1/3"></div>
               </div>
-              <div className="flex justify-between text-sm text-gray-500">
+              <div className="flex justify-between text-sm text-white">
                 <span>15:30</span>
                 <span>{episodeDetails.duration}</span>
               </div>
@@ -287,22 +287,22 @@ export default function EpisodeDetailPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Full Description */}
               <div>
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6">Episode Description</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">Episode Description</h2>
                 <div 
-                  className="text-gray-600 leading-relaxed space-y-4"
+                  className="text-white/80 leading-relaxed space-y-4"
                   dangerouslySetInnerHTML={{ __html: episodeDetails.fullDescription }}
                 />
               </div>
 
               {/* Chapters */}
               <div>
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6">Episode Chapters</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">Episode Chapters</h2>
                 <div className="space-y-3">
                   {episodeDetails.chapters.map((chapter, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div key={index} className="flex items-center justify-between p-4 bg-black/50 rounded-lg hover:bg-white/20 transition-colors">
                       <div className="flex items-center space-x-4">
-                        <span className="text-[#FF4F4F] font-semibold">{chapter.time}</span>
-                        <span className="text-gray-700">{chapter.title}</span>
+                        <span className="text-white font-semibold">{chapter.time}</span>
+                        <span className="text-white/80">{chapter.title}</span>
                       </div>
                       <button className="text-[#FF4F4F] hover:text-red-600">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -328,25 +328,25 @@ export default function EpisodeDetailPage() {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Host Info */}
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">About the Host</h3>
-                <div className="flex items-center space-x-4 mb-4">
+              <div className="bg-white/10 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">About the Host</h3>
+                <div className="flex items-center space-x-4 mb-4 text-white">
                   <img 
                     src={episodeDetails.host.imageUrl} 
                     alt={episodeDetails.host.name}
-                    className="w-16 h-16 rounded-full object-cover"
+                    className="w-16 h-16 rounded-full object-cover text-white"
                   />
                   <div>
                     <p className="font-semibold text-lg">{episodeDetails.host.name}</p>
-                    <p className="text-gray-600 text-sm">{episodeDetails.host.role}</p>
+                    <p className="text-gray-200 text-sm">{episodeDetails.host.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{episodeDetails.host.bio}</p>
+                <p className="text-gray-200 text-sm leading-relaxed">{episodeDetails.host.bio}</p>
               </div>
 
               {/* Episode Stats */}
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">Episode Stats</h3>
+              <div className="bg-white/10 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Episode Stats</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <p className="text-2xl font-bold text-[#FF4F4F]">{episodeDetails.metadata.listens}</p>
@@ -372,11 +372,11 @@ export default function EpisodeDetailPage() {
       </section>
 
       {/* Related Episodes */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">Related Episodes</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Related Episodes</h2>
+            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
               Continue your journey with these related conversations
             </p>
           </div>

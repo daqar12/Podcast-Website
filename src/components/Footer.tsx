@@ -81,17 +81,15 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
-                src="/podlogo.png"
+                src="/daq.png"
                 alt="Daqar Talks & Inspire Logo"
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="rounded-full"
               />
-              <span className="font-bold text-xl">Daqar Talks & Inspire</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-xs">
-              Conversations that drive deep into the heart of storytelling,
-              creativity, and human connection.
+                platform for the curious minds. We share stories that resonate, inspire, and spark meaningful conversations. Join us on this journey of discovery and growth.
             </p>
 
             {/* Social Media Links */}
@@ -164,7 +162,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Stories That Resonate. All rights reserved.
+            © {currentYear} Daqar Podcast. All rights reserved.
           </p>
 
           <div className="flex space-x-6 mt-4 md:mt-0">
