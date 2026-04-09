@@ -36,18 +36,18 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Modern Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Minimalist Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative px-5 py-2 text-sm font-medium text-gray-400 transition-all duration-300 
-                           hover:text-white hover:bg-white/10 hover:backdrop-blur-lg 
-                           rounded-full border border-transparent hover:border-white/20
-                           active:scale-95 active:bg-white/20"
+                className="group relative px-4 py-2 text-sm font-bold tracking-tight text-gray-300 transition-colors duration-300 hover:text-red-600"
               >
-                {item.name}
+                <span className="relative z-10">{item.name}</span>
+                
+                {/* The Liquid Line - Animated from center */}
+                <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-red-600 -translate-x-1/2 transition-all duration-300 " />
               </Link>
             ))}
           </div>
@@ -55,27 +55,27 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all"
+            className="md:hidden p-2 text-gray-400 hover:text-red-600 transition-colors"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={1.5}
+                strokeWidth={2}
                 d={isMenuOpen ? "M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"}
               />
             </svg>
           </button>
         </div>
 
-        {/* Mobile Navigation - Animated Slide Down */}
+        {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="pb-6 space-y-2">
+          <div className="pb-8 space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-3 text-base font-medium text-gray-400 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+                className="block text-2xl font-black text-white hover:text-red-600 transition-all px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

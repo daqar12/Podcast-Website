@@ -5,8 +5,11 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Daqar Podcast & Inspire',
+  title: 'Daqar Podcast',
   description: 'Daqar Podcast is a platform for the curious minds. We share stories that resonate, inspire, and spark meaningful conversations. Join us on this journey of discovery and growth.',
+  icons: {
+    icon: "/fa.png"
+  }
 }
 
 export default function RootLayout({

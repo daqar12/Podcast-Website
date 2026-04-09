@@ -18,7 +18,6 @@ export default function Home() {
       <Hero />
 
       {/* Divider */}
-      <div className="border-t border-gray-200"></div>
 
       {/* ============================================== */}
       {/* FEATURED EPISODE - UPDATED TO SHOW 2 PEOPLE    */}
